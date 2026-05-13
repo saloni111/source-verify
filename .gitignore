@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 test-evidence/
 test-engine.mjs
+
+AGENTS.md
+CLAUDE.md

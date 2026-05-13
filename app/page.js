@@ -373,10 +373,10 @@ export default function Home() {
             </div>
             <div className={styles.certFooter}>
               <div className={styles.certHash}>
-                SHA-256: e3b0c44298fc1c149afbf4c8996fb924...
+                SHA-256: 7a3f9c2e1b8d4056a1e2f8c4d5b6e7f0...
               </div>
               <div className={styles.certTimestamp}>
-                2025-04-28T14:23:17Z
+                April 28, 2025 · 2:23 PM UTC
               </div>
             </div>
           </div>
