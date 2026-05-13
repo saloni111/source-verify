@@ -6,7 +6,7 @@ A live prototype that verifies evidence from anonymous sources and generates a p
 
 ## Live Demo
 
-[source-verify.vercel.app](https://source-verify.vercel.app) *(deployed)*
+[source-verify.vercel.app](https://source-verify.vercel.app)
 
 ## What It Does
 
