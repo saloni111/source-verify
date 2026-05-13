@@ -63,15 +63,15 @@ export default function Home() {
         <div className={styles.heroStats}>
           <div className={styles.heroStat}>
             <div className={styles.heroStatValue}>SHA-256</div>
-            <div className={styles.heroStatLabel}>Hash Standard</div>
+            <div className={styles.heroStatLabel}>Hash standard</div>
           </div>
           <div className={styles.heroStat}>
-            <div className={styles.heroStatValue}>5-Layer</div>
-            <div className={styles.heroStatLabel}>Analysis Engine</div>
+            <div className={styles.heroStatValue}>5-layer</div>
+            <div className={styles.heroStatLabel}>Analysis engine</div>
           </div>
           <div className={styles.heroStat}>
-            <div className={styles.heroStatValue}>Zero</div>
-            <div className={styles.heroStatLabel}>Source Data Exposed</div>
+            <div className={styles.heroStatValue}>0</div>
+            <div className={styles.heroStatLabel}>Source data exposed</div>
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function Home() {
             <div className={styles.problemVisual}>
               <div className={styles.problemCardStack}>
                 <div className={styles.problemItem}>
-                  <div className={`${styles.problemIcon} ${styles.problemIconDanger}`}>⚠</div>
+                  <div className={`${styles.problemIcon} ${styles.problemIconDanger}`}></div>
                   <div>
                     <h4>Provenance Gap</h4>
                     <p>
@@ -110,7 +110,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles.problemItem}>
-                  <div className={`${styles.problemIcon} ${styles.problemIconWarning}`}>🔓</div>
+                  <div className={`${styles.problemIcon} ${styles.problemIconWarning}`}></div>
                   <div>
                     <h4>Identity Exposure</h4>
                     <p>
@@ -120,7 +120,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles.problemItem}>
-                  <div className={`${styles.problemIcon} ${styles.problemIconInfo}`}>📊</div>
+                  <div className={`${styles.problemIcon} ${styles.problemIconInfo}`}></div>
                   <div>
                     <h4>No Cross-Verification</h4>
                     <p>
@@ -202,7 +202,7 @@ export default function Home() {
           </div>
           <div className={styles.featuresGrid}>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>🔐</div>
+              <div className={styles.featureIndex}>01</div>
               <h3>Privacy-First Architecture</h3>
               <p>
                 Source identity is never stored. Evidence is processed through
@@ -211,7 +211,7 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>🔗</div>
+              <div className={styles.featureIndex}>02</div>
               <h3>Cross-Document Corroboration</h3>
               <p>
                 The engine maps relationships between evidence items —
@@ -220,7 +220,7 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>📋</div>
+              <div className={styles.featureIndex}>03</div>
               <h3>Attribution Generator</h3>
               <p>
                 Publication-ready language that journalists can paste directly
@@ -228,7 +228,7 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>🛡️</div>
+              <div className={styles.featureIndex}>04</div>
               <h3>Tamper Detection</h3>
               <p>
                 Every certificate is cryptographically sealed. Any modification

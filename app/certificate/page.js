@@ -7,13 +7,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./certificate.module.css";
 
-// Evidence items for the certificate display
 const EVIDENCE_ITEMS = [
-  { name: "Email Correspondence", icon: "📑", score: 91 },
-  { name: "Data Comparison Memo", icon: "📋", score: 94 },
-  { name: "Audio Recording", icon: "🎙️", score: 78 },
-  { name: "Personal Notes", icon: "📄", score: 85 },
-  { name: "Journalist Intake", icon: "📄", score: 89 },
+  { name: "Email Correspondence", ext: "pdf", score: 91 },
+  { name: "Data Comparison Memo", ext: "docx", score: 94 },
+  { name: "Audio Recording", ext: "mp3", score: 78 },
+  { name: "Personal Notes", ext: "docx", score: 85 },
+  { name: "Journalist Intake", ext: "txt", score: 89 },
 ];
 
 function ScoreRing({ score, size = 160, label }) {
@@ -166,7 +165,7 @@ function CertificateContent() {
                 {EVIDENCE_ITEMS.map((item, i) => (
                   <div key={i} className={styles.certDocEvidenceRow}>
                     <span className={styles.certDocEvidenceName}>
-                      <span>{item.icon}</span>
+                      <span className={styles.certDocEvidenceExt}>.{item.ext}</span>
                       {item.name}
                     </span>
                     <span
@@ -236,7 +235,7 @@ function CertificateContent() {
               className="btn btn-primary"
               onClick={() => window.print()}
             >
-              🖨️ Print Certificate
+              Print Certificate
             </button>
             <Link href="/verify" className="btn btn-secondary">
               New Verification

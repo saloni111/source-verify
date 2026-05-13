@@ -153,6 +153,17 @@
   gap: 8px;
 }
 
+.certDocEvidenceExt {
+  padding: 2px 6px;
+  background: rgba(245, 242, 235, 0.05);
+  border: 1px solid rgba(245, 242, 235, 0.1);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--cream-muted);
+  letter-spacing: 0.04em;
+}
+
 .certDocEvidenceScore {
   font-family: var(--font-mono);
   font-size: 0.85rem;

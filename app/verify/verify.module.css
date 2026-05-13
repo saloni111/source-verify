@@ -3,68 +3,71 @@
   padding-top: 100px;
 }
 
-/* ================================================
-   Header
-   ================================================ */
+/* ─── Header ─────────────────────────────────────────────── */
+
 .verifyHeader {
   text-align: center;
   padding: 0 var(--space-lg) var(--space-3xl);
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .verifyHeader h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: var(--space-sm);
 }
 
 .verifyHeader p {
   color: var(--cream-muted);
-  font-size: 1.05rem;
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
 }
 
-/* ================================================
-   Upload Zone
-   ================================================ */
+/* ─── Upload ─────────────────────────────────────────────── */
+
 .uploadSection {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
 }
 
 .uploadZone {
-  border: 2px dashed rgba(198, 151, 63, 0.25);
+  border: 1px dashed rgba(245, 242, 235, 0.16);
   border-radius: var(--radius-lg);
   padding: var(--space-3xl) var(--space-xl);
   text-align: center;
-  background: rgba(198, 151, 63, 0.03);
-  transition: all var(--transition-base);
+  background: rgba(245, 242, 235, 0.015);
+  transition: border-color var(--transition-base), background var(--transition-base);
   cursor: pointer;
-  position: relative;
 }
 
 .uploadZone:hover,
 .uploadZoneDragOver {
   border-color: var(--accent);
-  background: rgba(198, 151, 63, 0.06);
-  box-shadow: 0 0 40px var(--accent-glow);
+  background: rgba(198, 151, 63, 0.04);
 }
 
-.uploadIcon {
-  font-size: 3rem;
+.uploadIconArea {
+  display: flex;
+  justify-content: center;
   margin-bottom: var(--space-md);
-  opacity: 0.7;
+  color: var(--cream-muted);
+  opacity: 0.5;
 }
 
 .uploadZone h3 {
-  font-size: 1.3rem;
-  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
 }
 
 .uploadZone p {
   color: var(--cream-muted);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin-bottom: var(--space-lg);
+  line-height: 1.6;
 }
 
 .uploadInput {
@@ -74,39 +77,42 @@
 .uploadOrText {
   display: block;
   color: var(--cream-muted);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   margin-top: var(--space-md);
+  opacity: 0.5;
   font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .loadSampleBtn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   margin-top: var(--space-md);
-  padding: 10px 24px;
-  background: rgba(198, 151, 63, 0.1);
-  border: 1px solid rgba(198, 151, 63, 0.25);
-  border-radius: 100px;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid rgba(198, 151, 63, 0.3);
+  border-radius: var(--radius-sm);
   color: var(--accent);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
   cursor: pointer;
   transition: all var(--transition-base);
 }
 
 .loadSampleBtn:hover {
-  background: rgba(198, 151, 63, 0.18);
   border-color: var(--accent);
+  background: rgba(198, 151, 63, 0.06);
 }
 
-/* ================================================
-   File List
-   ================================================ */
+/* ─── File List ──────────────────────────────────────────── */
+
 .fileList {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: 6px;
   margin-top: var(--space-xl);
 }
 
@@ -114,27 +120,28 @@
   display: flex;
   align-items: center;
   gap: var(--space-md);
-  padding: var(--space-md) var(--space-lg);
+  padding: 12px var(--space-md);
   background: var(--bg-card);
   border: 1px solid rgba(245, 242, 235, 0.06);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-base);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast);
 }
 
 .fileItem:hover {
   border-color: rgba(245, 242, 235, 0.1);
 }
 
-.fileIcon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-glow);
-  border-radius: var(--radius-sm);
-  font-size: 1.1rem;
+.fileTypeBadge {
   flex-shrink: 0;
+  padding: 3px 8px;
+  background: rgba(245, 242, 235, 0.05);
+  border: 1px solid rgba(245, 242, 235, 0.1);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--cream-muted);
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
 }
 
 .fileInfo {
@@ -143,26 +150,29 @@
 }
 
 .fileName {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--cream);
 }
 
 .fileMeta {
   display: flex;
   gap: var(--space-md);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--cream-muted);
   font-family: var(--font-mono);
+  margin-top: 2px;
 }
 
 .fileHash {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   color: var(--cream-muted);
   font-family: var(--font-mono);
-  opacity: 0.7;
+  opacity: 0.55;
+  margin-top: 2px;
 }
 
 .fileStatus {
@@ -174,48 +184,49 @@
   border: none;
   color: var(--cream-muted);
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 4px 6px;
   font-size: 1rem;
+  line-height: 1;
   transition: color var(--transition-fast);
+  opacity: 0.5;
 }
 
 .removeBtn:hover {
   color: var(--danger);
+  opacity: 1;
 }
 
-/* ================================================
-   Action Bar
-   ================================================ */
+/* ─── Action Bar ─────────────────────────────────────────── */
+
 .actionBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: var(--space-xl);
-  padding-top: var(--space-xl);
+  padding-top: var(--space-lg);
   border-top: 1px solid rgba(245, 242, 235, 0.06);
 }
 
 .fileCount {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--cream-muted);
 }
 
-/* ================================================
-   Processing
-   ================================================ */
+/* ─── Processing ─────────────────────────────────────────── */
+
 .processingSection {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
 }
 
 .processingCard {
   background: var(--bg-card);
-  border: 1px solid rgba(245, 242, 235, 0.06);
+  border: 1px solid rgba(245, 242, 235, 0.07);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .processingHeader {
@@ -223,74 +234,79 @@
   align-items: center;
   gap: var(--space-md);
   margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(245, 242, 235, 0.06);
 }
 
 .processingSpinner {
-  width: 24px;
-  height: 24px;
-  border: 2px solid rgba(198, 151, 63, 0.2);
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid rgba(198, 151, 63, 0.2);
   border-top-color: var(--accent);
   border-radius: 50%;
-  animation: spin 0.8s linear infinite;
+  animation: spin 0.75s linear infinite;
+  flex-shrink: 0;
 }
 
 .processingTitle {
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cream);
 }
 
 .processingSteps {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 4px;
 }
 
 .processingStep {
   display: flex;
   align-items: center;
   gap: var(--space-md);
-  padding: var(--space-md);
+  padding: 10px var(--space-md);
   border-radius: var(--radius-sm);
-  transition: all var(--transition-base);
+  transition: background var(--transition-base);
 }
 
 .stepActive {
-  background: rgba(198, 151, 63, 0.05);
+  background: rgba(198, 151, 63, 0.04);
 }
 
 .stepComplete {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .stepPending {
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .stepIcon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
   flex-shrink: 0;
 }
 
 .stepIconActive {
-  background: var(--accent-glow);
-  border: 1px solid var(--accent-dim);
+  background: rgba(198, 151, 63, 0.1);
+  border: 1px solid rgba(198, 151, 63, 0.3);
+  color: var(--accent);
 }
 
 .stepIconComplete {
-  background: var(--success-bg);
-  border: 1px solid rgba(61, 139, 94, 0.3);
+  background: rgba(76, 175, 122, 0.1);
+  border: 1px solid rgba(76, 175, 122, 0.25);
   color: var(--success-light);
 }
 
 .stepIconPending {
-  background: rgba(245, 242, 235, 0.04);
+  background: rgba(245, 242, 235, 0.03);
   border: 1px solid rgba(245, 242, 235, 0.1);
   color: var(--cream-muted);
 }
@@ -300,20 +316,21 @@
 }
 
 .stepName {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 2px;
+  color: var(--cream);
 }
 
 .stepDesc {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--cream-muted);
   font-family: var(--font-mono);
+  margin-top: 2px;
 }
 
 .progressBar {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: rgba(245, 242, 235, 0.06);
   border-radius: 2px;
   margin-top: var(--space-xl);
@@ -322,48 +339,37 @@
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-dim), var(--accent));
+  background: var(--accent);
   border-radius: 2px;
-  transition: width 0.5s ease;
+  transition: width 0.4s ease;
 }
 
-/* ================================================
-   Analysis Log
-   ================================================ */
+/* ─── Analysis Log ───────────────────────────────────────── */
+
 .analysisLog {
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   border: 1px solid rgba(245, 242, 235, 0.06);
   border-radius: var(--radius-md);
-  padding: var(--space-md);
-  max-height: 200px;
+  padding: var(--space-md) var(--space-lg);
+  max-height: 180px;
   overflow-y: auto;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  line-height: 1.8;
+  font-size: 0.72rem;
+  line-height: 1.9;
 }
 
 .logLine {
-  color: var(--cream-muted);
-  padding: 2px 0;
+  color: rgba(245, 242, 235, 0.35);
 }
 
-.logLineHighlight {
-  color: var(--accent);
-}
+.logLineHighlight { color: var(--accent); }
+.logLineSuccess { color: var(--success-light); }
+.logLineInfo { color: var(--info); }
 
-.logLineSuccess {
-  color: var(--success-light);
-}
+/* ─── Results ────────────────────────────────────────────── */
 
-.logLineInfo {
-  color: var(--info);
-}
-
-/* ================================================
-   Results
-   ================================================ */
 .resultsSection {
-  max-width: 900px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 0 var(--space-lg) var(--space-4xl);
 }
@@ -375,90 +381,112 @@
 
 .resultsHeader h2 {
   font-size: 2rem;
-  margin-bottom: var(--space-sm);
 }
 
-.overviewGrid {
+/* Score + Metrics Panel */
+.scorePanel {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-2xl);
+  grid-template-columns: auto 1fr;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid rgba(245, 242, 235, 0.07);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
 }
 
-.scoreColumn {
+.scorePanelLeft {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--space-md);
+  padding: var(--space-2xl) var(--space-2xl);
+  border-right: 1px solid rgba(245, 242, 235, 0.06);
+  min-width: 180px;
 }
 
 .classificationBadge {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
 }
 
-.metricsColumn {
+.metricsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-md);
+  gap: 1px;
+  background: rgba(245, 242, 235, 0.06);
 }
 
 .metricCard {
-  padding: var(--space-lg);
   background: var(--bg-card);
-  border: 1px solid rgba(245, 242, 235, 0.06);
-  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .metricLabel {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--cream-muted);
-  margin-bottom: 6px;
 }
 
 .metricValue {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
 }
 
-.metricBar {
-  height: 4px;
-  background: rgba(245, 242, 235, 0.06);
+.metricUnit {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.metricTrack {
+  height: 2px;
+  background: rgba(245, 242, 235, 0.07);
   border-radius: 2px;
-  margin-top: 8px;
   overflow: hidden;
+  margin-top: 2px;
 }
 
-.metricBarFill {
+.metricFill {
   height: 100%;
   border-radius: 2px;
-  transition: width 1s ease;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.7;
 }
 
-/* ================================================
-   Evidence Analysis
-   ================================================ */
-.evidenceAnalysis {
-  margin-bottom: var(--space-2xl);
+/* ─── Evidence Section ───────────────────────────────────── */
+
+.evidenceSection {
+  margin-bottom: var(--space-xl);
 }
 
-.evidenceAnalysis h3 {
-  font-size: 1.2rem;
-  margin-bottom: var(--space-lg);
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+.sectionTitle {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cream-muted);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid rgba(245, 242, 235, 0.06);
 }
 
-.evidenceItemResult {
+.evidenceItem {
   background: var(--bg-card);
   border: 1px solid rgba(245, 242, 235, 0.06);
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-md);
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
   overflow: hidden;
 }
 
@@ -466,153 +494,169 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-md) var(--space-lg);
+  padding: 12px var(--space-md);
   cursor: pointer;
   transition: background var(--transition-fast);
+  gap: var(--space-md);
 }
 
 .evidenceItemHeader:hover {
-  background: var(--bg-card-hover);
+  background: rgba(245, 242, 235, 0.02);
 }
 
 .evidenceItemLeft {
   display: flex;
   align-items: center;
   gap: var(--space-md);
+  min-width: 0;
 }
 
 .evidenceItemName {
+  font-size: 0.875rem;
   font-weight: 500;
-  font-size: 0.9rem;
+  color: var(--cream);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.evidenceItemType {
+.evidenceItemCategory {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   color: var(--cream-muted);
+  margin-top: 2px;
 }
 
-.evidenceItemScore {
+.evidenceItemRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+.evidenceScore {
   font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.chevron {
+  font-size: 1.1rem;
+  color: var(--cream-muted);
+  transition: transform var(--transition-fast);
+  display: inline-block;
+}
+
+.chevronOpen {
+  transform: rotate(90deg);
 }
 
 .evidenceItemBody {
-  padding: 0 var(--space-lg) var(--space-lg);
-  border-top: 1px solid rgba(245, 242, 235, 0.04);
+  padding: 0 var(--space-md) var(--space-md);
+  border-top: 1px solid rgba(245, 242, 235, 0.05);
 }
 
 .findingsList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: 8px;
   margin-top: var(--space-md);
 }
 
 .findingItem {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-sm);
-  font-size: 0.85rem;
+  gap: 10px;
+  font-size: 0.84rem;
   color: var(--cream-dim);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-.findingIcon {
+.findingDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 6px;
 }
 
-.findingCorroborates {
-  color: var(--success-light);
-}
+.dotSuccess { background: var(--success-light); }
+.dotWarning { background: var(--accent); }
+.dotInfo { background: var(--info); opacity: 0.7; }
 
-.findingWarning {
-  color: var(--accent);
-}
+/* ─── Attribution Section ────────────────────────────────── */
 
-.findingNote {
-  color: var(--info);
-}
-
-/* ================================================
-   Attribution Section
-   ================================================ */
 .attributionSection {
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
 }
 
-.attributionSection h3 {
-  font-size: 1.2rem;
-  margin-bottom: var(--space-lg);
-}
-
-.attributionOptions {
+.attributionList {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 6px;
 }
 
-.attributionOption {
+.attributionItem {
   background: var(--bg-card);
   border: 1px solid rgba(245, 242, 235, 0.06);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-  transition: all var(--transition-base);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md) var(--space-lg);
+  transition: border-color var(--transition-base);
 }
 
-.attributionOption:hover {
-  border-color: rgba(198, 151, 63, 0.15);
+.attributionItem:hover {
+  border-color: rgba(198, 151, 63, 0.12);
+}
+
+.attributionMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
 }
 
 .attributionLabel {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--accent);
-  margin-bottom: var(--space-sm);
-}
-
-.attributionText {
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--cream);
-  font-style: italic;
-  margin-bottom: var(--space-md);
 }
 
 .copyBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  background: rgba(198, 151, 63, 0.1);
-  border: 1px solid rgba(198, 151, 63, 0.2);
-  border-radius: 100px;
-  color: var(--accent);
+  padding: 4px 12px;
+  background: transparent;
+  border: 1px solid rgba(245, 242, 235, 0.12);
+  border-radius: var(--radius-sm);
+  color: var(--cream-muted);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .copyBtn:hover {
-  background: rgba(198, 151, 63, 0.2);
+  border-color: rgba(245, 242, 235, 0.25);
+  color: var(--cream);
 }
 
 .copiedBtn {
-  background: var(--success-bg) !important;
-  border-color: rgba(61, 139, 94, 0.3) !important;
+  border-color: rgba(76, 175, 122, 0.3) !important;
   color: var(--success-light) !important;
 }
 
-/* ================================================
-   Certificate Actions
-   ================================================ */
+.attributionText {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--cream-dim);
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* ─── Certificate Actions ────────────────────────────────── */
+
 .certActions {
   display: flex;
   gap: var(--space-md);
@@ -621,21 +665,23 @@
   border-top: 1px solid rgba(245, 242, 235, 0.06);
 }
 
-/* ================================================
-   Responsive
-   ================================================ */
+/* ─── Responsive ─────────────────────────────────────────── */
+
 @media (max-width: 768px) {
-  .overviewGrid {
+  .scorePanel {
     grid-template-columns: 1fr;
   }
 
-  .scoreColumn {
+  .scorePanelLeft {
+    border-right: none;
+    border-bottom: 1px solid rgba(245, 242, 235, 0.06);
+    padding: var(--space-xl);
     flex-direction: row;
     justify-content: center;
   }
 
-  .metricsColumn {
-    grid-template-columns: 1fr;
+  .metricsGrid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .certActions {

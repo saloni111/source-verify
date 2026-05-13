@@ -376,45 +376,53 @@ h1, h2, h3, h4, h5, h6 {
    ================================================ */
 
 .score-ring {
-  position: relative;
-  width: 120px;
-  height: 120px;
+  display: grid;
+  place-items: center;
 }
 
 .score-ring svg {
+  grid-area: 1 / 1;
   transform: rotate(-90deg);
+  display: block;
 }
 
 .score-ring-bg {
   fill: none;
-  stroke: rgba(245, 242, 235, 0.08);
-  stroke-width: 8;
+  stroke: rgba(245, 242, 235, 0.07);
+  stroke-width: 7;
 }
 
 .score-ring-fill {
   fill: none;
   stroke: var(--accent);
-  stroke-width: 8;
+  stroke-width: 7;
   stroke-linecap: round;
-  transition: stroke-dashoffset 1.5s ease;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .score-ring-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  font-weight: 600;
   color: var(--cream);
+  pointer-events: none;
 }
 
 .score-ring-label {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--cream-muted);
   font-family: var(--font-mono);
+  font-weight: 400;
+  margin-top: 3px;
 }
 
 /* ================================================
