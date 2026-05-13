@@ -1,0 +1,264 @@
+.certPage {
+  min-height: 100vh;
+  padding: 120px var(--space-lg) var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certContainer {
+  max-width: 700px;
+  width: 100%;
+}
+
+.certDocument {
+  background: var(--bg-card);
+  border: 1px solid rgba(198, 151, 63, 0.15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 0 80px var(--accent-glow), 0 20px 60px rgba(0,0,0,0.4);
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* Decorative top bar */
+.certDocBar {
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-dim), var(--accent), var(--accent-bright), var(--accent), var(--accent-dim));
+}
+
+.certDocHeader {
+  padding: var(--space-2xl) var(--space-2xl) var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(245, 242, 235, 0.06);
+}
+
+.certDocBrand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+}
+
+.certDocMeta {
+  text-align: right;
+}
+
+.certDocId {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.certDocDate {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--cream-muted);
+}
+
+.certDocBody {
+  padding: var(--space-2xl);
+}
+
+.certDocTitle {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.certDocSubtitle {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--cream-muted);
+  font-family: var(--font-mono);
+  margin-bottom: var(--space-2xl);
+}
+
+.certDocScoreArea {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid rgba(245, 242, 235, 0.06);
+}
+
+.certDocGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.certDocGridItem {
+  padding: var(--space-md);
+  background: rgba(245, 242, 235, 0.03);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(245, 242, 235, 0.06);
+}
+
+.certDocGridLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cream-muted);
+  margin-bottom: 4px;
+}
+
+.certDocGridValue {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.certDocDivider {
+  height: 1px;
+  background: rgba(245, 242, 235, 0.06);
+  margin: var(--space-xl) 0;
+}
+
+.certDocSectionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cream-muted);
+  margin-bottom: var(--space-md);
+}
+
+.certDocEvidenceList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: var(--space-2xl);
+}
+
+.certDocEvidenceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px var(--space-md);
+  background: rgba(245, 242, 235, 0.02);
+  border-radius: var(--radius-sm);
+}
+
+.certDocEvidenceName {
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.certDocEvidenceScore {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.certDocAttribution {
+  background: rgba(198, 151, 63, 0.06);
+  border: 1px solid rgba(198, 151, 63, 0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.certDocAttrLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.certDocAttrText {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--cream);
+  font-style: italic;
+  line-height: 1.6;
+  border-left: 3px solid var(--accent);
+  padding-left: var(--space-md);
+}
+
+.certDocFooter {
+  padding: var(--space-md) var(--space-2xl);
+  background: rgba(245, 242, 235, 0.02);
+  border-top: 1px solid rgba(245, 242, 235, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certDocHash {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--cream-muted);
+  word-break: break-all;
+  max-width: 60%;
+}
+
+.certDocSeal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--success-light);
+}
+
+.certDocSealIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--success-bg);
+  border: 1px solid rgba(61, 139, 94, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* Actions below certificate */
+.certPageActions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-top: var(--space-2xl);
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+@media (max-width: 768px) {
+  .certDocHeader {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .certDocMeta {
+    text-align: left;
+  }
+
+  .certDocGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .certDocFooter {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+
+  .certDocHash {
+    max-width: 100%;
+  }
+
+  .certPageActions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
